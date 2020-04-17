@@ -28,8 +28,8 @@ class CoursePage extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log('submit', this.state.course.title);
-    // alert(this.state.course.title);
+    // console.log('submit', this.state.course.title); 👈
+    // alert(this.state.course.title); 🤷‍♂️
     // this.props.dispatch(courseActions.createCourse(this.state.course)); 👈 now this becomes obsolete
     this.props.actions.createCourse(this.state.course);
     this.setState({
