@@ -3,83 +3,65 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import * as courseActions from '../../redux/actions/courseActions';
+import * as authorActions from '../../redux/actions/authorActions';
+import CourseList from './CourseList';
 
 class CoursePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      course: {
-        title: '',
-      },
-    };
+  componentDidMount() {
+    const { courses, authors, actions } = this.props;
 
-    // this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+    // console.log('courses length : ', courses.length);
 
-  handleChange = (e) => {
-    e.preventDefault();
+    if (authors.length === 0) {
+      actions.loadAuthors().catch((error) => {
+        alert('Loading authors failed' + error);
+      });
+    }
 
-    const course = { ...this.state.course, title: e.target.value };
-    // console.log('course :- ', course);
-    this.setState({ course });
-    // console.log('spread state : ', ...this.state.course);
-  };
-
-  handleSubmit(e) {
-    e.preventDefault();
-    // console.log('submit', this.state.course.title); 👈
-    // alert(this.state.course.title); 🤷‍♂️
-    // this.props.dispatch(courseActions.createCourse(this.state.course)); 👈 now this becomes obsolete
-    this.props.actions.createCourse(this.state.course);
-    this.setState({
-      course: {
-        title: '',
-      },
-    });
+    if (courses.length === 0) {
+      actions.loadCourses().catch((error) => {
+        alert('Loading courses failed' + error);
+      });
+    }
   }
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <h2>Courses </h2>
-          <h3>Add Course</h3>
-          <input
-            type='text'
-            onChange={this.handleChange}
-            value={this.state.course.title}
-          />
-          <input type='submit' value='save' />
-          {this.props.courses.map((course) => (
-            <div key={course.title}> {course.title}</div>
-          ))}
-        </form>
-      </div>
+      <>
+        <h2>Courses</h2>
+        <CourseList courses={this.props.courses} />
+      </>
     );
   }
 }
 
 CoursePage.propTypes = {
+  authors: PropTypes.array.isRequired,
   courses: PropTypes.array.isRequired,
-  // dispatch: PropTypes.func.isRequired, 👈 now this becomes obsolete
   actions: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
-  return { courses: state.courses };
-}
-
-// sending data to store
-function mapDispatchToProps(dispatch) {
   return {
-    // createCourse: (course) => dispatch(courseActions.createCourse(course)),
-    actions: bindActionCreators(courseActions, dispatch),
+    // courses: state.courses,
+
+    courses: state.courses.map((course) => {
+      return {
+        ...course,
+        authorName: state.authors.find((a) => a.id === course.authorId) || {},
+      };
+    }),
+    authors: state.authors,
   };
 }
 
-// const mapDispatchToProps = {
-//   createCourse: courseActions.createCourse,
-// };
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      loadCourses: bindActionCreators(courseActions.loadCourses, dispatch),
+      loadAuthors: bindActionCreators(authorActions.loadAuthors, dispatch),
+    },
+  };
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(CoursePage);
