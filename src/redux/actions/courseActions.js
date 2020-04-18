@@ -1,22 +1,14 @@
-import * as types from '../constants/actionTypes';
+import * as types from './actionTypes';
 import * as courseApi from '../../api/courseApi';
 
-// 👇 below is the action that call a reducer to implement state changes in store
-// 👇 these are my actions
 export function createCourse(course) {
-  return { type: types.CREATE_COURSE, course: course };
+  return { type: types.CREATE_COURSE, course };
 }
 
 export function loadCourseSuccess(courses) {
-  return { type: types.LOAD_COURSES_SUCCESS, courses: courses };
+  return { type: types.LOAD_COURSES_SUCCESS, courses };
 }
 
-/* ---------------------------------------👆ACTION SECTION👆---------------------------------------------- */
-
-/* ---------------------------------------👇THUNK SECTION👇---------------------------------------------- */
-
-// 👇 declaring thunk
-// core benefit of using thunk is that it passes 👉 dispatch 👈 as default argument
 export function loadCourses() {
   return function (dispatch) {
     return courseApi
@@ -25,7 +17,6 @@ export function loadCourses() {
         dispatch(loadCourseSuccess(courses));
       })
       .catch((error) => {
-        console.log('Error happened : ', error);
         throw error;
       });
   };

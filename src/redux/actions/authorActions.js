@@ -1,24 +1,19 @@
-import * as types from '../constants/actionTypes';
+import * as types from './actionTypes';
 import * as authorApi from '../../api/authorApi';
 
-export function loadAuthorSuccess(authors) {
-  return { type: types.LOAD_AUTHOR_SUCCESS, authors: authors };
+export function loadAuthorsSuccess(authors) {
+  return { type: types.LOAD_AUTHORS_SUCCESS, authors };
 }
-
-/* ---------------------------------------👆ACTION SECTION👆---------------------------------------------- */
-
-/* ---------------------------------------👇THUNK SECTION👇---------------------------------------------- */
 
 export function loadAuthors() {
   return function (dispatch) {
     return authorApi
       .getAuthors()
       .then((authors) => {
-        console.log('all authors : ', authors);
-        dispatch(loadAuthorSuccess(authors));
+        dispatch(loadAuthorsSuccess(authors));
       })
-      .catch((err) => {
-        throw err;
+      .catch((error) => {
+        throw error;
       });
   };
 }

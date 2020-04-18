@@ -3,8 +3,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 process.env.NODE_ENV = 'development';
-process.env['API_URL'] = 'http://localhost:3001';
-console.log(process.env.API_URL);
 
 module.exports = {
   mode: 'development',

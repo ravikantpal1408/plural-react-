@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
 import * as courseActions from '../../redux/actions/courseActions';
 import * as authorActions from '../../redux/actions/authorActions';
+import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
 import CourseList from './CourseList';
 
-class CoursePage extends Component {
+class CoursesPage extends React.Component {
   componentDidMount() {
     const { courses, authors, actions } = this.props;
-
-    // console.log('courses length : ', courses.length);
-
-    if (authors.length === 0) {
-      actions.loadAuthors().catch((error) => {
-        alert('Loading authors failed' + error);
-      });
-    }
 
     if (courses.length === 0) {
       actions.loadCourses().catch((error) => {
         alert('Loading courses failed' + error);
+      });
+    }
+
+    if (authors.length === 0) {
+      actions.loadAuthors().catch((error) => {
+        alert('Loading authors failed' + error);
       });
     }
   }
@@ -35,7 +33,7 @@ class CoursePage extends Component {
   }
 }
 
-CoursePage.propTypes = {
+CoursesPage.propTypes = {
   authors: PropTypes.array.isRequired,
   courses: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
@@ -43,14 +41,16 @@ CoursePage.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    // courses: state.courses,
-
-    courses: state.courses.map((course) => {
-      return {
-        ...course,
-        authorName: state.authors.find((a) => a.id === course.authorId) || {},
-      };
-    }),
+    courses:
+      state.authors.length === 0
+        ? []
+        : state.courses.map((course) => {
+            return {
+              ...course,
+              authorName: state.authors.find((a) => a.id === course.authorId)
+                .name,
+            };
+          }),
     authors: state.authors,
   };
 }
@@ -64,4 +64,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CoursePage);
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
