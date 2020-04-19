@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const CourseList = ({ courses }) => (
-  <table className='table'>
+  <table className="table">
     <thead>
       <tr>
         <th />
@@ -13,19 +13,19 @@ const CourseList = ({ courses }) => (
       </tr>
     </thead>
     <tbody>
-      {courses.map((course) => {
+      {courses.map(course => {
         return (
           <tr key={course.id}>
             <td>
               <a
-                className='btn btn-light'
-                href={'http://pluralsight.com/courses/' + course.slug}
+                className="btn btn-light"
+                href={"http://pluralsight.com/courses/" + course.slug}
               >
                 Watch
               </a>
             </td>
             <td>
-              <Link to={'/course/' + course.slug}>{course.title}</Link>
+              <Link to={"/course/" + course.slug}>{course.title}</Link>
             </td>
             <td>{course.authorName}</td>
             <td>{course.category}</td>
@@ -37,7 +37,7 @@ const CourseList = ({ courses }) => (
 );
 
 CourseList.propTypes = {
-  courses: PropTypes.array.isRequired,
+  courses: PropTypes.array.isRequired
 };
 
 export default CourseList;
