@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match snapshot should match with spnapshot  1`] = `
+<div
+  className="loader"
+>
+  Loading...
+</div>
+`;
