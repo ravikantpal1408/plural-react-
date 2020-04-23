@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1587580610112" clover="3.2.0">
-  <project timestamp="1587580610112" name="All files">
-    <metrics statements="127" coveredstatements="78" conditionals="70" coveredconditionals="40" methods="54" coveredmethods="26" elements="251" coveredelements="144" complexity="0" loc="127" ncloc="127" packages="7" files="21" classes="21"/>
+<coverage generated="1587662103971" clover="3.2.0">
+  <project timestamp="1587662103971" name="All files">
+    <metrics statements="134" coveredstatements="84" conditionals="70" coveredconditionals="40" methods="58" coveredmethods="29" elements="262" coveredelements="153" complexity="0" loc="134" ncloc="134" packages="7" files="22" classes="22"/>
     <package name="src.api">
       <metrics statements="13" coveredstatements="4" conditionals="8" coveredconditionals="1" methods="6" coveredmethods="2"/>
       <file name="apiUtils.js" path="/Volumes/ravi128/PROJECTS/pluralsight/src/api/apiUtils.js">
@@ -66,13 +66,23 @@
       </file>
     </package>
     <package name="src.components.courses">
-      <metrics statements="39" coveredstatements="23" conditionals="34" coveredconditionals="17" methods="15" coveredmethods="6"/>
+      <metrics statements="46" coveredstatements="29" conditionals="34" coveredconditionals="17" methods="19" coveredmethods="9"/>
       <file name="CourseForm.js" path="/Volumes/ravi128/PROJECTS/pluralsight/src/components/courses/CourseForm.js">
         <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="8" methods="2" coveredmethods="2"/>
         <line num="6" count="4" type="stmt"/>
         <line num="14" count="11" type="stmt"/>
         <line num="35" count="15" type="stmt"/>
         <line num="58" count="4" type="stmt"/>
+      </file>
+      <file name="CourseList.js" path="/Volumes/ravi128/PROJECTS/pluralsight/src/components/courses/CourseList.js">
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
       </file>
       <file name="ManageCoursePage.js" path="/Volumes/ravi128/PROJECTS/pluralsight/src/components/courses/ManageCoursePage.js">
         <metrics statements="35" coveredstatements="19" conditionals="24" coveredconditionals="9" methods="13" coveredmethods="4"/>
@@ -203,10 +213,10 @@
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="mockData.js" path="/Volumes/ravi128/PROJECTS/pluralsight/tools/mockData.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="74" count="3" type="stmt"/>
-        <line num="80" count="3" type="stmt"/>
-        <line num="88" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="74" count="4" type="stmt"/>
+        <line num="80" count="4" type="stmt"/>
+        <line num="88" count="4" type="stmt"/>
       </file>
       <file name="styleMock.js" path="/Volumes/ravi128/PROJECTS/pluralsight/tools/styleMock.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
