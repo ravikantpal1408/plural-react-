@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1587662103971" clover="3.2.0">
-  <project timestamp="1587662103971" name="All files">
+<coverage generated="1587666305272" clover="3.2.0">
+  <project timestamp="1587666305272" name="All files">
     <metrics statements="134" coveredstatements="84" conditionals="70" coveredconditionals="40" methods="58" coveredmethods="29" elements="262" coveredelements="153" complexity="0" loc="134" ncloc="134" packages="7" files="22" classes="22"/>
     <package name="src.api">
       <metrics statements="13" coveredstatements="4" conditionals="8" coveredconditionals="1" methods="6" coveredmethods="2"/>
@@ -76,11 +76,11 @@
       </file>
       <file name="CourseList.js" path="/Volumes/ravi128/PROJECTS/pluralsight/src/components/courses/CourseList.js">
         <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="26" count="10" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="26" count="20" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
         <line num="58" count="1" type="stmt"/>
       </file>
