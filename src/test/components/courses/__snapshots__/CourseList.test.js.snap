@@ -1,3 +1,345 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match the snapshot 1`] = `ShallowWrapper {}`;
+exports[`should match the snapshot 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th />
+      <th>
+        Title
+      </th>
+      <th>
+        Author
+      </th>
+      <th>
+        Category
+      </th>
+      <th />
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/react-auth0-authentication-security"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/react-auth0-authentication-security"
+          onClick={[Function]}
+        >
+          Securing React Apps with Auth0
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        JavaScript
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/react-big-picture"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/react-big-picture"
+          onClick={[Function]}
+        >
+          React: The Big Picture
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        JavaScript
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/react-creating-reusable-components"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/react-creating-reusable-components"
+          onClick={[Function]}
+        >
+          Creating Reusable React Components
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        JavaScript
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/javascript-development-environment"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/javascript-development-environment"
+          onClick={[Function]}
+        >
+          Building a JavaScript Development Environment
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        JavaScript
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/react-redux-react-router-es6"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/react-redux-react-router-es6"
+          onClick={[Function]}
+        >
+          Building Applications with React and Redux
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        JavaScript
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/react-flux-building-applications"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/react-flux-building-applications"
+          onClick={[Function]}
+        >
+          Building Applications in React and Flux
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        JavaScript
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/writing-clean-code-humans"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/writing-clean-code-humans"
+          onClick={[Function]}
+        >
+          Clean Code: Writing Code for Humans
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        Software Practices
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/architecting-applications-dotnet"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/architecting-applications-dotnet"
+          onClick={[Function]}
+        >
+          Architecting Applications for the Real World
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        Software Architecture
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/career-reboot-for-developer-mind"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/career-reboot-for-developer-mind"
+          onClick={[Function]}
+        >
+          Becoming an Outlier: Reprogramming the Developer Mind
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        Career
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          className="btn btn-light"
+          href="http://pluralsight.com/courses/web-components-shadow-dom"
+        >
+          Watch
+        </a>
+      </td>
+      <td>
+        <a
+          href="/course/web-components-shadow-dom"
+          onClick={[Function]}
+        >
+          Web Component Fundamentals
+        </a>
+      </td>
+      <td>
+        Cory House
+      </td>
+      <td>
+        HTML5
+      </td>
+      <td>
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

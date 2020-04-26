@@ -1,6 +1,6 @@
 import React from "react";
 import {cleanup, render} from "react-testing-library";
-import CourseForm from "./CourseForm";
+import CourseForm from "../../../components/courses/CourseForm";
 
 afterEach(cleanup);
 

@@ -1,26 +1,40 @@
 import React from 'react';
 import CourseList from '../../../components/courses/CourseList';
-import {shallow} from 'enzyme';
+// import { shallow } from 'enzyme';
 import MockData from '../../../../tools/mockData';
-import {Provider} from 'react-redux';
-import configureStore from "../../../redux/configureStore";
-
+// import { Provider } from 'react-redux';
+import configureStore from '../../../redux/configureStore';
+import renderer from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
 
 const store = configureStore();
 
-
-const props = MockData.courses;
+const props = {
+  courses: MockData.courses.map((c) => {
+    return {
+      ...c,
+      authorName: MockData.authors.find((a) => a.id === c.authorId).name,
+    };
+  }),
+  onDeleteClick: jest.fn(),
+};
 
 test('should match the snapshot', () => {
-    // const mockDelete = jest.fn();
-    const wrapper = shallow(<Provider store={store}>
-        <CourseList courses={props} onDeleteClick={jest.fn()}/>
-    </Provider>);
-    expect(wrapper).toMatchSnapshot();
+  // const mockDelete = jest.fn();
+  const wrapper = renderer.create(
+    <MemoryRouter>
+      <CourseList {...props} />
+    </MemoryRouter>
+  );
+  expect(wrapper).toMatchSnapshot();
 });
 
 test('should delete on click', () => {
-    const wrapper = shallow(<CourseList courses={props} onDeleteClick={jest.fn()}/>);
-    const instance = wrapper.find('.btn-outline-danger').at(1);
-    console.log(instance);
+  const wrapper = renderer.create(
+    <MemoryRouter>
+      <CourseList {...props} />
+    </MemoryRouter>
+  );
+  console.log(wrapper);
+
 });
