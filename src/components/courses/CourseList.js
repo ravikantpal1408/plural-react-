@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class CourseList extends React.Component {
-
   render() {
     const { courses } = this.props;
-
     return (
       <table className='table'>
         <thead>

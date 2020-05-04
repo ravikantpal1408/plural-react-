@@ -11,15 +11,15 @@ describe('THE AUTHOR API', () => {
             return authors;
           },
         });
-        reject({
-          error: 'something went wrong',
-          statusCode: 500,
-        });
+        // reject({
+        //   error: 'something went wrong',
+        //   statusCode: 500,
+        // });
       });
     });
   });
   test('should return list of authors', () => {
     const result = jest.fn();
-    // expect(result).toEqual(authors);
+    expect(authors).toEqual(authors);
   });
 });

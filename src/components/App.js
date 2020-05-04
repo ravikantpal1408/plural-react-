@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import HomePage from './home/HomePage';
 import AboutPage from './about/AboutPage';
+import Dashboard from './pricing/containers/Dashboard';
 import Header from './common/Header';
 import PageNotFound from './PageNotFound';
 import CoursesPage from './courses/CoursesPage';
@@ -20,6 +21,7 @@ function App() {
         <Route path='/courses' component={CoursesPage} />
         <Route path='/course/:slug' component={ManageCoursePage} />
         <Route path='/course' component={ManageCoursePage} />
+        <Route path='/dashboard' component={Dashboard} />
         <Route component={PageNotFound} />
       </Switch>
 
